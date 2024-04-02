@@ -1,5 +1,8 @@
 package com.br.guilhermegomes.core.domain;
 
+import com.br.guilhermegomes.core.exception.TransactionPinException;
+import com.br.guilhermegomes.core.exception.enums.ErrorCodeEnum;
+
 import java.time.LocalDateTime;
 
 public class TransactionPin {
@@ -49,13 +52,13 @@ public class TransactionPin {
         return pin;
     }
 
-    public void setPin(String pin) {
+    public void setPin(String pin) throws TransactionPinException {
         pinIsValid(pin);
         this.pin = pin;
     }
-    private void pinIsValid(String pin) {
+    private void pinIsValid(String pin) throws TransactionPinException{
         if(pin.length() != 8) {
-            throw new IllegalArgumentException("Pin must have 8 characters");
+            throw new TransactionPinException(ErrorCodeEnum.TRP0001.getMessage(), ErrorCodeEnum.TRP0001.getCode());
         }
     }
 

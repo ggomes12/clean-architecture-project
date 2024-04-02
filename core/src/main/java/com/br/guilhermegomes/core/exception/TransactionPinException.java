@@ -1,11 +1,10 @@
 package com.br.guilhermegomes.core.exception;
 
-public class TaxNumberException extends Exception{
+public class TransactionPinException extends Throwable{
     private String code;
 
-    public TaxNumberException(String message, String code) {
+    public TransactionPinException(String message, String code) {
         super(message);
         this.code = code;
     }
-
 }

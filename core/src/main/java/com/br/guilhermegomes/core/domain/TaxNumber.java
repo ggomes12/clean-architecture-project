@@ -1,5 +1,8 @@
 package com.br.guilhermegomes.core.domain;
 
+import com.br.guilhermegomes.core.exception.TaxNumberException;
+import com.br.guilhermegomes.core.exception.enums.ErrorCodeEnum;
+
 public class TaxNumber {
     private String value;
 

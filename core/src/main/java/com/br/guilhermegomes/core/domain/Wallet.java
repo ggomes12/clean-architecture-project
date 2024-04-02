@@ -1,6 +1,8 @@
 package com.br.guilhermegomes.core.domain;
 
 import com.br.guilhermegomes.core.enums.UserTypeEnum;
+import com.br.guilhermegomes.core.exception.TransferException;
+import com.br.guilhermegomes.core.exception.enums.ErrorCodeEnum;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -45,10 +47,10 @@ public class Wallet {
 
     public void transfer(BigDecimal value) throws Exception {
         if(this.user.getType() == UserTypeEnum.SHOPKEEPER) {
-            throw new Exception("Shopkeeper can't transfer money");
+            throw new TransferException(ErrorCodeEnum.TR0001.getCode(), ErrorCodeEnum.TR0001.getMessage());
         }
         if(this.balance.compareTo(value) < 0) {
-            throw new Exception("Insufficient balance");
+            throw new TransferException(ErrorCodeEnum.TR0002.getCode(), ErrorCodeEnum.TR0002.getMessage());
         }
         this.balance.subtract(value);
     }

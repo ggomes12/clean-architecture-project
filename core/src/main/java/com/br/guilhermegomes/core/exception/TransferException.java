@@ -1,11 +1,10 @@
 package com.br.guilhermegomes.core.exception;
 
-public class TaxNumberException extends Exception{
+public class TransferException extends Exception {
     private String code;
 
-    public TaxNumberException(String message, String code) {
+    public TransferException(String message, String code) {
         super(message);
         this.code = code;
     }
-
 }
