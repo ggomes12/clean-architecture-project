@@ -2,6 +2,8 @@ package com.br.guilhermegomes.core.exception.enums;
 
 public enum ErrorCodeEnum {
     ON0001("Invalid tax number", "ON-0001"),
+    ON0002("Unavailable tax number", "ON-0002"),
+    ON0003("Unavailable email", "ON-0003"),
     TR0001("ShopKeeper The merchant does not have the Transfer function available", "TR-0001"),
     TR0002("Insufficient balance", "TR-0002"),
     TRP0001("Invalid transaction pin", "TRP-0001"),;

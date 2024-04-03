@@ -1,7 +1,7 @@
-package com.br.guilhermegomes.usecase;
+package com.br.guilhermegomes.application.gateway;
 
 import com.br.guilhermegomes.core.domain.TransactionPin;
 
-public interface CreateTransactionPinUseCase {
+public interface CreateTransactionPinGateway {
     void create(TransactionPin transactionPin);
 }

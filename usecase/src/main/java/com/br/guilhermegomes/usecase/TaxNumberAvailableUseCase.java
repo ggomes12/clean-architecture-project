@@ -1,5 +1,5 @@
 package com.br.guilhermegomes.usecase;
 
-public interface TaxNumberAvaliableUseCase {
+public interface TaxNumberAvailableUseCase {
     Boolean taxNumberAvaliable(String taxNumber);
 }
