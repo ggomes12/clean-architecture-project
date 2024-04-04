@@ -119,4 +119,5 @@ public class User {
     public int hashCode() {
         return Objects.hash(getId(), getEmain(), getPassword(), getTaxNumber(), getFullName(), getType(), getTransactionPin(), getCreatedAt(), getUpdateAt());
     }
+
 }

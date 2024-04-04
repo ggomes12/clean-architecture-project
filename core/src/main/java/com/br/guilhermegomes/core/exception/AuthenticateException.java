@@ -1,9 +1,10 @@
 package com.br.guilhermegomes.core.exception;
 
-public class NotFoundException extends Exception {
+public class AuthenticateException extends Exception{
     private String code;
-    public NotFoundException(String message, String code) {
+    public AuthenticateException(String message, String code) {
         super(message);
         this.code = code;
+
     }
 }
